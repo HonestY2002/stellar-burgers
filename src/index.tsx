@@ -10,10 +10,6 @@ const root = ReactDOMClient.createRoot(container!);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
         <App />
-      </Provider>
-    </BrowserRouter>
   </React.StrictMode>
 );

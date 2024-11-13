@@ -20,9 +20,7 @@ export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const constructorItems = useSelector(
-    constructorSelector.constructorItems
-  );
+  const constructorItems = useSelector(constructorSelector.constructorItems);
   const isAuth = useSelector(isAuthCheckedSelector);
 
   const orderRequest = useSelector(orderRequestSelector);
@@ -57,6 +55,7 @@ export const BurgerConstructor: FC = () => {
       ),
     [constructorItems]
   );
+  // return null;
 
   return (
     <BurgerConstructorUI

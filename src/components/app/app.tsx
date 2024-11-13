@@ -14,7 +14,7 @@ import styles from './app.module.css';
 
 import { AppHeader, OrderInfo, IngredientDetails, Modal } from '@components';
 import { useLocation, useNavigate, Route, Routes } from 'react-router-dom';
-import { ProtectedRoute } from '../ProtectedRoute';
+import { ProtectedRoute } from '../protected-route';
 import { useDispatch } from '../../services/store';
 import { useEffect } from 'react';
 import { getIngredientsList } from '../../services/slice/ingredientSlice';
@@ -101,7 +101,7 @@ const App = () => {
       </Routes>
 
       {background && (
-        <Routes>
+        <Route>
           <Route
             path='/feed/:number'
             element={
@@ -129,7 +129,7 @@ const App = () => {
               </Modal>
             }
           />
-        </Routes>
+        </Route>
       )}
     </div>
   );

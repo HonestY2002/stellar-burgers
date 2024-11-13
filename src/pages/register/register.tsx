@@ -19,14 +19,14 @@ export const Register: FC = () => {
     dispatch(
       userRegister({
         email: email,
-        name: userName,
-        password: password
+        password: password,
+        name: userName
       })
     ).then(() => {
       if (!error) {
-        navigate('/login', {replace: true})
+        navigate('/login', { replace: true });
       }
-    })
+    });
   };
 
   return (

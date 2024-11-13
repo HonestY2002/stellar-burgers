@@ -7,16 +7,23 @@ import { getFeedsList, ordersSelector } from '../../services/slice/feedSlice';
 
 export const Feed: FC = () => {
   /** TODO: взять переменную из стора */
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const orders: TOrder[] = useSelector(ordersSelector);
 
   useEffect(() => {
-    dispatch(getFeedsList)
-  })
+    dispatch(getFeedsList());
+  }, []);
 
   if (!orders.length) {
-    return <Preloader />
+    return <Preloader />;
   }
 
-  <FeedUI orders={orders} handleGetFeeds={() => { dispatch(getFeedsList());}} />;
+  return (
+    <FeedUI
+      orders={orders}
+      handleGetFeeds={() => {
+        dispatch(getFeedsList());
+      }}
+    />
+  );
 };

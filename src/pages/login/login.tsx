@@ -13,7 +13,6 @@ export const Login: FC = () => {
   const error = useSelector(errorSelector);
   const location = useLocation();
 
-
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
 

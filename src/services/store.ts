@@ -8,18 +8,18 @@ import {
 import { constructorReducer } from './slice/constructorSlice';
 import { ingredientReducer } from './slice/ingredientSlice';
 import { userReducer } from './slice/userSlice';
-import { feedReducer } from './slice/feedSlice';
+import { feedsReducer } from './slice/feedSlice';
 import { orderReducer } from './slice/orderSlice';
 import { addOrderReducer } from './slice/addOrderSlice';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   burgerConstructor: constructorReducer,
   burgerIngredients: ingredientReducer,
   user: userReducer,
-  feeds: feedReducer,
+  feeds: feedsReducer,
   orders: orderReducer,
   addOrder: addOrderReducer
-}); 
+});
 
 const store = configureStore({
   reducer: rootReducer,
@@ -31,6 +31,7 @@ export type RootState = ReturnType<typeof rootReducer>;
 export type AppDispatch = typeof store.dispatch;
 
 export const useDispatch: () => AppDispatch = () => dispatchHook();
+
 export const useSelector: TypedUseSelectorHook<RootState> = selectorHook;
 
 export default store;

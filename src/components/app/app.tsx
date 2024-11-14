@@ -101,7 +101,7 @@ const App = () => {
       </Routes>
 
       {background && (
-        <Route>
+        <Routes>
           <Route
             path='/feed/:number'
             element={
@@ -129,7 +129,7 @@ const App = () => {
               </Modal>
             }
           />
-        </Route>
+        </Routes>
       )}
     </div>
   );

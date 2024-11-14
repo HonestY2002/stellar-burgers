@@ -4,17 +4,17 @@ import { getOrdersApi } from '@api';
 
 export const getOrdersList = createAsyncThunk('orders/getOrders', getOrdersApi);
 
-export type OrdersState = {
+export type TOrdersState = {
   orders: Array<TOrder>;
   loading: boolean;
 };
 
-export const initialState: OrdersState = {
+export const initialState: TOrdersState = {
   orders: [],
   loading: false
 };
 
-export const orderSlice = createSlice({
+export const ordersSlice = createSlice({
   name: 'orders',
   initialState,
   reducers: {},
@@ -37,5 +37,5 @@ export const orderSlice = createSlice({
   }
 });
 
-export const { getOrdersListSelector } = orderSlice.selectors;
-export const orderReducer = orderSlice.reducer;
+export const { getOrdersListSelector } = ordersSlice.selectors;
+export const ordersReducer = ordersSlice.reducer;

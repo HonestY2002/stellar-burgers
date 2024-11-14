@@ -1,11 +1,12 @@
 import { FC, useMemo } from 'react';
 import { TConstructorIngredient } from '@utils-types';
 import { BurgerConstructorUI } from '@ui';
-import { useDispatch, useSelector } from '../../services/store';
+import { useDispatch } from '../../services/store';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import {
   clearConstructor,
-  constructorSelector
+  constructorBurgerSelector
 } from '../../services/slice/constructorSlice';
 import { isAuthCheckedSelector } from '../../services/slice/userSlice';
 import {
@@ -20,7 +21,9 @@ export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const constructorItems = useSelector(constructorSelector.constructorItems);
+  const constructorItems = useSelector(
+    constructorBurgerSelector.constructorItems
+  );
   const isAuth = useSelector(isAuthCheckedSelector);
 
   const orderRequest = useSelector(orderRequestSelector);

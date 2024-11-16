@@ -7,13 +7,13 @@ export const addOrder = createAsyncThunk(
   orderBurgerApi
 );
 
-export type TAddOrderState = {
+export type AddOrderState = {
   orderRequest: boolean;
   orderModalData: TOrder | null;
   error: string | undefined;
 };
 
-export const initialState: TAddOrderState = {
+export const initialState: AddOrderState = {
   orderRequest: false,
   orderModalData: null,
   error: undefined

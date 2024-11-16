@@ -10,7 +10,7 @@ import { TConstructorIngredient, TIngredient } from '@utils-types';
 import { BurgerConstructorElement, Modal } from '@components';
 import { Preloader, OrderDetailsUI } from '@ui';
 import { useDrop } from 'react-dnd';
-import { useDispatch } from '../../../services/store';
+import { useDispatch } from 'react-redux';
 import { addToIngredient } from '../../../services/slice/constructorSlice';
 
 export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({

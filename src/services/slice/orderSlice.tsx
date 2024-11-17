@@ -4,17 +4,29 @@ import { getOrdersApi } from '@api';
 
 export const getOrdersList = createAsyncThunk('orders/getOrders', getOrdersApi);
 
+<<<<<<< HEAD
 export type OrdersState = {
+=======
+export type TOrdersState = {
+>>>>>>> review
   orders: Array<TOrder>;
   loading: boolean;
 };
 
+<<<<<<< HEAD
 export const initialState: OrdersState = {
+=======
+export const initialState: TOrdersState = {
+>>>>>>> review
   orders: [],
   loading: false
 };
 
+<<<<<<< HEAD
 export const orderSlice = createSlice({
+=======
+export const ordersSlice = createSlice({
+>>>>>>> review
   name: 'orders',
   initialState,
   reducers: {},
@@ -37,5 +49,10 @@ export const orderSlice = createSlice({
   }
 });
 
+<<<<<<< HEAD
 export const { getOrdersListSelector } = orderSlice.selectors;
 export const orderReducer = orderSlice.reducer;
+=======
+export const { getOrdersListSelector } = ordersSlice.selectors;
+export const ordersReducer = ordersSlice.reducer;
+>>>>>>> review

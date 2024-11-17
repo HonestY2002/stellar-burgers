@@ -4,7 +4,11 @@ import { getFeedsApi } from '@api';
 
 export const getFeedsList = createAsyncThunk('feeds/getFeeds', getFeedsApi);
 
+<<<<<<< HEAD
 export type FeedState = {
+=======
+export type TFeedsState = {
+>>>>>>> review
   orders: TOrder[];
   total: number;
   totalToday: number;
@@ -12,7 +16,11 @@ export type FeedState = {
   error: string | null | undefined;
 };
 
+<<<<<<< HEAD
 export const initialState: FeedState = {
+=======
+export const initialState: TFeedsState = {
+>>>>>>> review
   orders: [],
   total: 0,
   totalToday: 0,
@@ -20,7 +28,11 @@ export const initialState: FeedState = {
   error: null
 };
 
+<<<<<<< HEAD
 export const feedSlice = createSlice({
+=======
+export const feedsSlice = createSlice({
+>>>>>>> review
   name: 'feeds',
   initialState,
   reducers: {},
@@ -59,6 +71,12 @@ export const {
   totalTodaySelector,
   isLoadingSelector,
   errorSelector
+<<<<<<< HEAD
 } = feedSlice.selectors;
 
 export const feedsReducer = feedSlice.reducer;
+=======
+} = feedsSlice.selectors;
+
+export const feedsReducer = feedsSlice.reducer;
+>>>>>>> review

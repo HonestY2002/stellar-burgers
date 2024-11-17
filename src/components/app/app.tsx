@@ -97,7 +97,14 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route path='*' element={<NotFound404 />} />
+        <Route
+          path='*'
+          element={
+            <div className={styles.detailPageWrap}>
+              <NotFound404 />
+            </div>
+          }
+        />
       </Routes>
 
       {background && (

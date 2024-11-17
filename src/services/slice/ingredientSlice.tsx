@@ -7,31 +7,19 @@ export const getIngredientsList = createAsyncThunk(
   getIngredientsApi
 );
 
-<<<<<<< HEAD
-export type ingredientsState = {
-=======
 export type TBurgerIngredientsState = {
->>>>>>> review
   ingredients: TIngredient[];
   loading: boolean;
   error: string | null | undefined;
 };
 
-<<<<<<< HEAD
-export const initialState: ingredientsState = {
-=======
 export const initialState: TBurgerIngredientsState = {
->>>>>>> review
   ingredients: [],
   loading: false,
   error: null
 };
 
-<<<<<<< HEAD
-export const ingredientsSlice = createSlice({
-=======
 export const burgerIngredientsSlice = createSlice({
->>>>>>> review
   name: 'burgerIngredients',
   initialState,
   reducers: {},
@@ -61,12 +49,6 @@ export const {
   getIngredientsSelector,
   getIngredientsLoadingSelector,
   getIngredientsStateSelector
-<<<<<<< HEAD
-} = ingredientsSlice.selectors;
-
-export const ingredientReducer = ingredientsSlice.reducer;
-=======
 } = burgerIngredientsSlice.selectors;
 
 export const ingredientsSliceReducer = burgerIngredientsSlice.reducer;
->>>>>>> review

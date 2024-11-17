@@ -1,4 +1,4 @@
-import { orderBurgerApi } from '@api';
+import { getOrderByNumberApi, orderBurgerApi } from '@api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
 
@@ -7,21 +7,13 @@ export const addOrder = createAsyncThunk(
   orderBurgerApi
 );
 
-<<<<<<< HEAD
-export type addOrderState = {
-=======
-export type AddOrderState = {
->>>>>>> review
+export type TAddOrderState = {
   orderRequest: boolean;
   orderModalData: TOrder | null;
   error: string | undefined;
 };
 
-<<<<<<< HEAD
-export const initialState: addOrderState = {
-=======
-export const initialState: AddOrderState = {
->>>>>>> review
+export const initialState: TAddOrderState = {
   orderRequest: false,
   orderModalData: null,
   error: undefined

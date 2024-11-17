@@ -33,21 +33,13 @@ export const userLogin = createAsyncThunk(
     return data.user;
   }
 );
-<<<<<<< HEAD
-export interface UserState {
-=======
 export interface TUserState {
->>>>>>> review
   isAuthChecked: boolean;
   user: TUser;
   error: string | undefined;
 }
 
-<<<<<<< HEAD
-export const initialState: UserState = {
-=======
 const initialState: TUserState = {
->>>>>>> review
   isAuthChecked: false,
   user: {
     email: '',
